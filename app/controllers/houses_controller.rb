@@ -9,6 +9,6 @@ class HousesController < ApplicationController
 
   #GET /houses/:id
   def show
-    @house = House.find(params[:id])
+    @house = House.includes(:students, :teachers).find(params[:id])
   end
 end

@@ -10,7 +10,17 @@
   </head>
 
   <body>
-    <h1>WELCOME TO HOGWARTS</h1>
+    <header>
+      <h1>WELCOME TO HOGWARTS</h1>
+      <nav>
+        <ul>
+          <li><%= link_to "Home", root_path%></li>
+          <li><%= link_to "Teachers", teachers_path%></li>
+          <li><%= link_to "Students", students_path%></li>
+        </ul>
+      </nav>
+    </header>
+
 
 
     <%= yield %>

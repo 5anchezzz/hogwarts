@@ -1,6 +1,6 @@
 <h2>All Houses</h2>
 <ul>
   <% @houses.each do |house| %>
-    <li><%= link_to house.name, house %> has <%= pluralize(house.points, 'point') %>.</li>
+    <li><%= link_to house.name, house %> has <%= pluralize(house.points, 'point') %>, has <%= pluralize(house.students.size, 'student') %></li>
   <% end %>
 </ul>
