@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'houses/index'
-  get 'houses/show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :houses, only: [:index, :show]
+
+  #get 'houses',      to: 'houses#index',  as: 'houses'
+  #get 'houses/:id', to: 'houses#show',    as: 'house'
+
+  root to: 'houses#index'
+
 end
