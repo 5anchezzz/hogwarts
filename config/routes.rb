@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pages
   resources :houses,    only: [:index, :show]
   resources :teachers,  only: [:index, :show]
   resources :students,  only: [:index, :show]
